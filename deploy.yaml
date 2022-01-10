@@ -51,5 +51,6 @@ spec:
         backend:
           service:
             name: webserver
-            port: http
+            port: 
+              name: http
 
