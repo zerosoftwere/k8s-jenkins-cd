@@ -4,7 +4,6 @@ pipeline {
 
    environment {
      SERVICE_NAME = "webserver"
-     REPOSITORY_NAME = "k8s-jenkins-cd"
      IMAGE_TAG="${DOCKERHUB_USERNAME}/${SERVICE_NAME}:${BUILD_ID}"
    }
 
@@ -12,7 +11,7 @@ pipeline {
       stage('Preparation') {
          steps {
             cleanWs()
-            git credentialsId: 'GitHub', url: "https://github.com/${REPOSITORY_NAME}/"
+            git credentialsId: 'GitHub', url: "https://github.com/zerosoftwere/k8s-jenkins-cd.git"
          }
       }
 
