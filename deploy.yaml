@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webserver
-        image: ${REPOSITORY_TAG}
+        image: ${IMAGE_TAG}
         resources:
           limits:
             cpu: 100m
